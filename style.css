@@ -1,0 +1,107 @@
+.darkbtnc {
+	margin: 0;
+  width:auto;
+  height:auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 2rem;
+}
+.darklabel {
+	width:150px;
+	height:70px;
+	position: relative;
+	display: block;
+	background: #ebebeb;
+	border-radius: 70px;
+	box-shadow: inset 0px 5px 15px rgba(0,0,0,0.4), inset 0px -5px 15px rgba(255,255,255,0.4);
+	cursor: pointer;
+	transition: 0.3s;
+}
+.darklabel:after {
+	content: "";
+	width:50px;
+	height: 50px;
+	position: absolute;
+	top:10px;
+	left:10px;
+	background: linear-gradient(180deg,#ffcc89,#d8860b);
+	border-radius: 50px;
+	box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+	transition: 0.3s;
+}
+.darktoggle {
+	width: 0;
+	height: 0;
+	visibility: hidden;
+}
+.darktoggle:checked + .darklabel {
+	background: #242424;
+}
+.darktoggle:checked + .darklabel:after {
+	left:130px;
+	transform: translateX(-100%);
+	background: linear-gradient(180deg,#777,#3a3a3a);
+}
+.darklabel:active:after{
+	width: 260px;
+}
+
+.darktoggle:checked + .darklabel + .background {
+	background:#242424;
+}
+.darklabel svg {
+	position: absolute;
+	width: 40px;
+	top:15px;
+	z-index: 100;
+}
+.darklabel svg.sun {
+	left:15px;
+	fill:#fff;
+	transition: 0.3s;
+}
+.darklabel svg.moon {
+	left:85px;
+	fill:#7e7e7e;
+	transition: 0.3s;
+}
+.darktoggle:checked + .darklabel svg.sun {
+	fill:#7e7e7e;
+}
+.darktoggle:checked + .darklabel svg.moon {
+	fill:#fff;
+}
+
+.callusbtn{
+    position: relative;
+}
+.callusbtn::after{
+    content: "";
+    background: url(assets/images/underline.png);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    height: 20px;
+    left: 0px;
+    bottom: -10px;
+
+}
+
+.redtext{
+    color: #e52428;
+    font-weight: bold;
+}
+.headedsc{
+    font-size: 1.5rem;
+    padding-right: 60px;
+}
+#callbtnred{
+    cursor: pointer;
+    transition: scale 1s  ease-in-out;;
+}
+#callbtnred:hover{
+    scale: 1.1;
+}
